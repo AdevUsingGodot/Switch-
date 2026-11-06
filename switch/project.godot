@@ -11,13 +11,22 @@ config_version=5
 [application]
 
 config/name="Switch"
+run/main_scene="uid://dcw17nakmkwg2"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Juicee="*uid://b36fwfvmmv0xc"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/juicee/plugin.cfg")
 
 [physics]
 
@@ -25,6 +34,7 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
